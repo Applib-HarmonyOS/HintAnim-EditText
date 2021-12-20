@@ -33,6 +33,7 @@ import java.util.List;
  */
 public class MainAbilitySlice extends AbilitySlice {
     private static final HiLogLabel HILOG_LABEL = new HiLogLabel(0, 0, "MainAbilitySlice");
+    private static final int DELAY_TIME = 3000;
     HintAnimEditText mEditText;
     Text mTextView;
     List<CharSequence> data;
@@ -48,7 +49,7 @@ public class MainAbilitySlice extends AbilitySlice {
         data.add("xyz@hotmail.com");
         data.add("mno@yahoo.com");
 
-        mTextView = (Text) findComponentById(ResourceTable.Id_text_helloworld);
+        mTextView = (Text) findComponentById(ResourceTable.Id_text_Signup);
         mEditText = (HintAnimEditText) findComponentById(ResourceTable.Id_Email);
         mTextView.setText("Sign Up");
         //Set the initial display
@@ -62,11 +63,11 @@ public class MainAbilitySlice extends AbilitySlice {
                     if (mPos >= data.size()) {
                         mPos = 0;
                     }
-                    handler.postTask(this, 3000);
+                    handler.postTask(this, DELAY_TIME);
                 }
             };
 
-            handler.postTask(mrunnable, 3000);
+            handler.postTask(mrunnable, DELAY_TIME);
         } catch (Exception e) {
             HiLog.error(HILOG_LABEL, "Exception in onStart");
         }

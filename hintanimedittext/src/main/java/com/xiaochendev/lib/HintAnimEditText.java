@@ -45,7 +45,7 @@ public class HintAnimEditText extends TextField implements Component.DrawTask {
         mHintPaint.setAntiAlias(true);
         mHintPaint.setColor(getHintColor());
         mHintPaint.setAlpha((int) getAlpha());
-        mHintPaint.setColor(Color.WHITE);
+        mHintPaint.setColor(Color.GRAY);
         mHintPaint.setTextSize(getTextSize());
         mHintPaint.setTextAlign(TextAlignment.CENTER);
         mDefaultTextSize = getTextSize();

@@ -7,11 +7,10 @@
     ohos:orientation="vertical">
 
     <Text
-        ohos:id="$+id:text_helloworld"
+        ohos:id="$+id:text_Signup"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="HelloWorld"
         ohos:text_size="60vp"
         ohos:text_font="sans-serif-medium"
         ohos:bottom_margin="10vp"/>
@@ -25,7 +24,7 @@
         ohos:text_size="50vp"
         ohos:hint="Username"
         ohos:element_padding="220vp"
-        ohos:hint_color="#FFFFFF"
+        ohos:hint_color="#808080"
         ohos:text_input_type="pattern_text"
         ohos:multiple_lines="false"
         ohos:bottom_margin="10vp"
@@ -53,7 +52,7 @@
         ohos:text_size="50vp"
         ohos:hint="Password"
         ohos:element_padding="220vp"
-        ohos:hint_color="#FFFFFF"
+        ohos:hint_color="#808080"
         ohos:text_input_type="pattern_password"
         ohos:multiple_lines="false"
         ohos:bottom_margin="10vp"
