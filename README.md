@@ -1,70 +1,71 @@
 # HintAnim-EditText
 
-[![](https://jitpack.io/v/cctanfujun/HintAnim-EditText.svg)](https://jitpack.io/#cctanfujun/HintAnim-EditText)
+A HMOS library which provies Edittext with hint animation
 
-## Looks like
+## Source
+Inspired by [cctanfujun/HintAnim-EditText](https://github.com/cctanfujun/HintAnim-EditText/) - version 0.1
 
-![hint-anim](./img/Hint-Anim.gif)
+## Feature
+This library provides an animation of hint for EditText.
 
+<img src="screenshots/HintAnimEditText.gif" width="350">
+
+## Dependency
+1. For using hintanimedittext module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
+```groovy
+	dependencies {
+		implementation project(':hintanimedittext')
+                implementation fileTree(dir: 'libs', include: ['*.har'])
+                testImplementation 'junit:junit:4.13'
+	}
+```
+2. For using hintanimedittext in separate application using har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file.
+```groovy
+	dependencies {
+		implementation fileTree(dir: 'libs', include: ['*.har'])
+		testImplementation 'junit:junit:4.13'
+	}
+```
 
 ## How TO USE
 
-Step 1. Add the JitPack repository to your build file
-
-gradle
-maven
-sbt
-leiningen
-Add it in your root build.gradle at the end of repositories:
-
-	allprojects {
-		repositories {
-			...
-			maven { url "https://jitpack.io" }
-		}
-	}
-Step 2. Add the dependency
-
-	dependencies {
-	        compile 'com.github.cctanfujun:HintAnim-EditText:v0.1'
-	}
-
-Step 3. declare in your xml
-	
-	<com.xiaochendev.lib.HintAnimEditText
-        android:id="@+id/edittxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/search"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:singleLine="true"
-        />
+#### Declare in your xml
+```xml
+<com.xiaochendev.lib.HintAnimEditText
+    ohos:id="$+id:Email"
+    ohos:width="match_parent"
+    ohos:height="70vp"
+    ohos:element_left="$media:email"
+    ohos:background_element="#FFD5A6E0"
+    ohos:text_size="50vp"
+    ohos:input_enter_key_type="enter_key_type_search"
+    ohos:text_input_type="pattern_text"
+    ohos:multiple_lines="false"
+    ohos:bottom_margin="10vp"
+    />
+```
 
 change hint with anim like this：
 
-	mEditText.changeHintWithAnim("XXX");        
-
-Note: you should use `setHintString("xxx")` change hint without anim or `changeHintWithAnim("XXX")` change hint with anim   instead of EditText’s hint.
-
-## I Want to Say
-
-I think this is a really easy widget,maybe you need't dependence it in your build.gradle,but it provided a way to change hint with anim,when you have to do this,you can learn something from source code.
-
+```java
+mEditText.changeHintWithAnim("XXX");
+```
+Note: you should use ``setHintString("xxx")`` change hint without anim or ``changeHintWithAnim("XXX")`` change hint with anim instead of EditText’s hint.
 
 ## License
+```
+Copyright 2015 cctanfujun
 
-    Copyright 2015 cctanfujun
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.        
-        	
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.  
+```
+      

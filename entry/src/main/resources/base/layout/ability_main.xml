@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="$media:back"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:text_Signup"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text_size="60vp"
+        ohos:text_font="sans-serif-medium"
+        ohos:bottom_margin="10vp"/>
+
+    <Text
+        ohos:id="$+id:Username"
+        ohos:width="match_parent"
+        ohos:height="70vp"
+        ohos:element_left="$media:user"
+        ohos:background_element="#FFD5A6E0"
+        ohos:text_size="50vp"
+        ohos:hint="Username"
+        ohos:element_padding="220vp"
+        ohos:hint_color="#808080"
+        ohos:text_input_type="pattern_text"
+        ohos:multiple_lines="false"
+        ohos:bottom_margin="10vp"
+        />
+
+    <com.xiaochendev.lib.HintAnimEditText
+        ohos:id="$+id:Email"
+        ohos:width="match_parent"
+        ohos:height="70vp"
+        ohos:element_left="$media:email"
+        ohos:background_element="#FFD5A6E0"
+        ohos:text_size="50vp"
+        ohos:input_enter_key_type="enter_key_type_search"
+        ohos:text_input_type="pattern_text"
+        ohos:multiple_lines="false"
+        ohos:bottom_margin="10vp"
+        />
+
+    <Text
+        ohos:id="$+id:Password"
+        ohos:width="match_parent"
+        ohos:height="80vp"
+        ohos:element_left="$media:lock"
+        ohos:background_element="#FFD5A6E0"
+        ohos:text_size="50vp"
+        ohos:hint="Password"
+        ohos:element_padding="220vp"
+        ohos:hint_color="#808080"
+        ohos:text_input_type="pattern_password"
+        ohos:multiple_lines="false"
+        ohos:bottom_margin="10vp"
+        />
+
+</DirectionalLayout>
