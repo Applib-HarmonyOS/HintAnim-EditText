@@ -1,3 +1,5 @@
+[![.github/workflows/main.yml](https://github.com/applibgroup/HintAnim-EditText/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/HintAnim-EditText/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_HintAnim-EditText&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=applibgroup_HintAnim-EditText)
 # HintAnim-EditText
 
 A HMOS library which provies Edittext with hint animation
@@ -25,6 +27,13 @@ This library provides an animation of hint for EditText.
 		implementation fileTree(dir: 'libs', include: ['*.har'])
 		testImplementation 'junit:junit:4.13'
 	}
+```
+3. For using hintanimedittext from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+```groovy
+        dependencies {
+            implementation 'dev.applibgroup:hintanimedittext:1.0.0' 
+            testCompile 'junit:junit:4.13'
+        }
 ```
 
 ## How TO USE
